@@ -1,398 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="GlowGuide — AI-powered personalized skincare routines backed by science. Take the Skin Quiz and get your unique glow." />
-  <title>GlowGuide — Your Skin, Decoded.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Real Estate — Luxury Living Redefined</title>
+    <meta name="description" content="VIP Real Estate offers premium luxury properties including villas, penthouses, beachfront homes, and city apartments. Discover your dream home with VIP.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ═══════════════ NAVBAR ═══════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="logo-icon">✦</span>
-        glowguide
-      </a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#quiz">Daily Quiz</a></li>
-        <li><a href="#products">The Shelf</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#ethos">Our Ethos</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <a href="#" class="btn-text">Log In</a>
-        <a href="#quiz" class="btn-primary btn-sm">Join Glow</a>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">VIP</div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        </div>
     </div>
-  </nav>
 
-  <!-- ═══════════════ HERO ═══════════════ -->
-  <section class="hero" id="home">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          AI-Powered Skin Analysis
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <span class="logo-icon"><i class="fas fa-crown"></i></span>
+                <span class="logo-text">VIP</span>
+                <span class="logo-sub">REAL ESTATE</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#properties" class="nav-link" data-section="properties">Properties</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-gold btn-nav">Get Started</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
+    </nav>
 
-        <h1 class="hero-title">
-          Your Skin,<br />
-          <em>Decoded.</em>
-        </h1>
-
-        <p class="hero-sub">
-          Personalized routines backed by science and<br />
-          curated for your unique glow. No more guesswork,<br />
-          just results.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#quiz" class="btn-primary btn-lg" id="takeQuizBtn">
-            Take the Skin Quiz
-          </a>
-          <a href="#how" class="btn-ghost btn-lg">
-            <span class="play-icon">▶</span>
-            How it works
-          </a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="images/hero_bg.png" alt="Luxury real estate aerial view" loading="eager">
+            <div class="hero-overlay"></div>
         </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-img-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=520&h=620&fit=crop&crop=faces"
-            alt="Woman with glowing clear skin"
-            class="hero-img"
-            loading="eager"
-          />
-          <div class="hero-card">
-            <p class="hero-card-quote">
-              "The first routine that actually worked for my hormonal acne."
+        <div class="hero-particles" id="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <i class="fas fa-gem"></i> Premium Luxury Properties
+            </div>
+            <h1 class="hero-title" data-aos="fade-up">
+                <span class="hero-title-line">Discover</span>
+                <span class="hero-title-line gold">Extraordinary</span>
+                <span class="hero-title-line">Living Spaces</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Experience unparalleled luxury with our handpicked collection of premium properties across the world's most prestigious locations.
             </p>
-            <span class="hero-card-author">— Maya, 24</span>
-          </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="#properties" class="btn btn-gold btn-lg">
+                    <span>Explore Properties</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-outline btn-lg">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="2500">0</span>
+                    <span class="hero-stat-label">Properties Sold</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="1800">0</span>
+                    <span class="hero-stat-label">Happy Clients</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="15">0</span>
+                    <span class="hero-stat-label">Years Experience</span>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="hero-scroll">
+            <a href="#properties" class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-line"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section" id="search-section">
+        <div class="container">
+            <div class="search-bar glass" data-aos="fade-up">
+                <div class="search-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                    <select id="search-location">
+                        <option value="">All Locations</option>
+                        <option value="miami">Miami, FL</option>
+                        <option value="beverly">Beverly Hills, CA</option>
+                        <option value="malibu">Malibu, CA</option>
+                        <option value="newyork">New York, NY</option>
+                        <option value="dubai">Dubai, UAE</option>
+                    </select>
+                </div>
+                <div class="search-divider"></div>
+                <div class="search-group">
+                    <label><i class="fas fa-home"></i> Property Type</label>
+                    <select id="search-type">
+                        <option value="">All Types</option>
+                        <option value="villa">Villa</option>
+                        <option value="penthouse">Penthouse</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="estate">Estate</option>
+                    </select>
+                </div>
+                <div class="search-divider"></div>
+                <div class="search-group">
+                    <label><i class="fas fa-dollar-sign"></i> Price Range</label>
+                    <select id="search-price">
+                        <option value="">Any Price</option>
+                        <option value="500k-1m">$500K - $1M</option>
+                        <option value="1m-3m">$1M - $3M</option>
+                        <option value="3m-5m">$3M - $5M</option>
+                        <option value="5m+">$5M+</option>
+                    </select>
+                </div>
+                <button class="btn btn-gold search-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="section properties-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-crown"></i> Premium Selection</span>
+                <h2 class="section-title">Featured <span class="gold">Properties</span></h2>
+                <p class="section-subtitle">Explore our curated collection of the finest luxury properties, handpicked for the most discerning clientele.</p>
+            </div>
+
+            <!-- Property Filter Tabs -->
+            <div class="property-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-filter="all">All</button>
+                <button class="tab-btn" data-filter="villa">Villas</button>
+                <button class="tab-btn" data-filter="penthouse">Penthouses</button>
+                <button class="tab-btn" data-filter="apartment">Apartments</button>
+                <button class="tab-btn" data-filter="estate">Estates</button>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-grid" id="properties-grid">
+                <!-- Property Card 1 -->
+                <div class="property-card" data-category="villa" data-aos="fade-up">
+                    <div class="property-image">
+                        <img src="images/luxury_villa.png" alt="Sunset Luxury Villa" loading="lazy">
+                        <div class="property-badge">Featured</div>
+                        <div class="property-price">$4,500,000</div>
+                        <div class="property-overlay">
+                            <button class="btn btn-sm btn-gold" onclick="openPropertyModal(0)">View Details</button>
+                        </div>
+                        <button class="property-fav" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Miami Beach, FL</div>
+                        <h3 class="property-title">Sunset Luxury Villa</h3>
+                        <p class="property-desc">Stunning waterfront villa with panoramic ocean views, infinity pool, and private dock.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 6,200 sqft</span>
+                            <span><i class="fas fa-car"></i> 3 Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <div class="agent-avatar">JM</div>
+                                <span>James Mitchell</span>
+                            </div>
+                            <span class="property-date"><i class="far fa-clock"></i> 2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card" data-category="penthouse" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-image">
+                        <img src="images/modern_penthouse.png" alt="Skyline Penthouse" loading="lazy">
+                        <div class="property-badge premium">Premium</div>
+                        <div class="property-price">$8,200,000</div>
+                        <div class="property-overlay">
+                            <button class="btn btn-sm btn-gold" onclick="openPropertyModal(1)">View Details</button>
+                        </div>
+                        <button class="property-fav" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Manhattan, NY</div>
+                        <h3 class="property-title">Skyline Penthouse Suite</h3>
+                        <p class="property-desc">Ultra-luxury penthouse with 360° city views, private terrace, and concierge services.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 5 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 5,800 sqft</span>
+                            <span><i class="fas fa-car"></i> 2 Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <div class="agent-avatar">SC</div>
+                                <span>Sarah Collins</span>
+                            </div>
+                            <span class="property-date"><i class="far fa-clock"></i> 5 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card" data-category="villa" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-image">
+                        <img src="images/beachfront_house.png" alt="Beachfront Paradise" loading="lazy">
+                        <div class="property-badge">New</div>
+                        <div class="property-price">$6,750,000</div>
+                        <div class="property-overlay">
+                            <button class="btn btn-sm btn-gold" onclick="openPropertyModal(2)">View Details</button>
+                        </div>
+                        <button class="property-fav" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Malibu, CA</div>
+                        <h3 class="property-title">Beachfront Paradise Villa</h3>
+                        <p class="property-desc">Contemporary beachfront living with floor-to-ceiling glass walls and direct ocean access.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 6 Beds</span>
+                            <span><i class="fas fa-bath"></i> 6 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 7,500 sqft</span>
+                            <span><i class="fas fa-car"></i> 4 Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <div class="agent-avatar">RK</div>
+                                <span>Robert King</span>
+                            </div>
+                            <span class="property-date"><i class="far fa-clock"></i> 1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="property-card" data-category="apartment" data-aos="fade-up" data-aos-delay="300">
+                    <div class="property-image">
+                        <img src="images/city_apartment.png" alt="Downtown Luxury Apartment" loading="lazy">
+                        <div class="property-badge">Hot</div>
+                        <div class="property-price">$2,350,000</div>
+                        <div class="property-overlay">
+                            <button class="btn btn-sm btn-gold" onclick="openPropertyModal(3)">View Details</button>
+                        </div>
+                        <button class="property-fav" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Beverly Hills, CA</div>
+                        <h3 class="property-title">Downtown Luxury Apartment</h3>
+                        <p class="property-desc">Sophistication meets comfort in this designer downtown residence with premium amenities.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 3,200 sqft</span>
+                            <span><i class="fas fa-car"></i> 2 Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <div class="agent-avatar">EW</div>
+                                <span>Emma Watson</span>
+                            </div>
+                            <span class="property-date"><i class="far fa-clock"></i> 3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 5 -->
+                <div class="property-card" data-category="estate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-image">
+                        <img src="images/countryside_estate.png" alt="Grand Countryside Estate" loading="lazy">
+                        <div class="property-badge premium">Exclusive</div>
+                        <div class="property-price">$12,900,000</div>
+                        <div class="property-overlay">
+                            <button class="btn btn-sm btn-gold" onclick="openPropertyModal(4)">View Details</button>
+                        </div>
+                        <button class="property-fav" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Greenwich, CT</div>
+                        <h3 class="property-title">Grand Countryside Estate</h3>
+                        <p class="property-desc">Magnificent estate spanning 10 acres with manor house, guest house, and equestrian facilities.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 8 Beds</span>
+                            <span><i class="fas fa-bath"></i> 10 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 15,000 sqft</span>
+                            <span><i class="fas fa-car"></i> 6 Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <div class="agent-avatar">DH</div>
+                                <span>David Harrison</span>
+                            </div>
+                            <span class="property-date"><i class="far fa-clock"></i> Just listed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 6 -->
+                <div class="property-card" data-category="penthouse" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-image">
+                        <img src="images/modern_penthouse.png" alt="Harbor View Penthouse" loading="lazy">
+                        <div class="property-badge">New</div>
+                        <div class="property-price">$5,600,000</div>
+                        <div class="property-overlay">
+                            <button class="btn btn-sm btn-gold" onclick="openPropertyModal(5)">View Details</button>
+                        </div>
+                        <button class="property-fav" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</div>
+                        <h3 class="property-title">Harbor View Penthouse</h3>
+                        <p class="property-desc">Premium penthouse offering breathtaking harbor views with world-class amenities and services.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 4,500 sqft</span>
+                            <span><i class="fas fa-car"></i> 3 Garage</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <div class="agent-avatar">AL</div>
+                                <span>Amira Lutfi</span>
+                            </div>
+                            <span class="property-date"><i class="far fa-clock"></i> 4 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta" data-aos="fade-up">
+                <a href="#" class="btn btn-gold btn-lg">View All Properties <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images" data-aos="fade-right">
+                    <div class="about-img-main">
+                        <img src="images/luxury_villa.png" alt="VIP Real Estate luxury property">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="images/beachfront_house.png" alt="VIP Real Estate beachfront property">
+                    </div>
+                    <div class="about-experience glass">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <span class="section-tag"><i class="fas fa-crown"></i> Who We Are</span>
+                    <h2 class="section-title">Redefining <span class="gold">Luxury</span> Real Estate</h2>
+                    <p class="about-text">At VIP Real Estate, we believe that a home is more than just a space — it's a statement. For over 15 years, we've been connecting discerning buyers with the world's most exceptional properties.</p>
+                    <p class="about-text">Our team of elite agents brings unmatched market expertise, discretion, and dedication to every client relationship. We don't just find homes; we curate lifestyles.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4>Trusted Expertise</h4>
+                                <p>Industry-leading knowledge in luxury real estate markets worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <h4>Personal Service</h4>
+                                <p>Dedicated one-on-one attention from your exclusive VIP agent.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <h4>Global Network</h4>
+                                <p>Access to exclusive off-market properties across 40+ countries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-gold btn-lg">
+                        <span>Start Your Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-crown"></i> What We Offer</span>
+                <h2 class="section-title">Our Premium <span class="gold">Services</span></h2>
+                <p class="section-subtitle">Comprehensive luxury real estate services tailored to your unique needs and aspirations.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass" data-aos="fade-up">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+                    </div>
+                    <h3>Property Search</h3>
+                    <p>Access our curated portfolio of exclusive luxury properties worldwide, with personalized matching based on your preferences.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <h3>Investment Advisory</h3>
+                    <p>Expert guidance on real estate investments, portfolio management, and market analysis for maximum returns.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-building"></i></div>
+                    </div>
+                    <h3>Property Management</h3>
+                    <p>Full-service property management including maintenance, tenant relations, and financial reporting.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Transform your property with our network of world-renowned interior designers and architects.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                    </div>
+                    <h3>Legal Consultation</h3>
+                    <p>Comprehensive legal support for property transactions, contracts, and international regulations.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon"><i class="fas fa-key"></i></div>
+                    </div>
+                    <h3>Concierge Services</h3>
+                    <p>Premium relocation and lifestyle services to ensure a seamless transition into your new home.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-crown"></i> Client Stories</span>
+                <h2 class="section-title">What Our Clients <span class="gold">Say</span></h2>
+                <p class="section-subtitle">Real stories from our valued clients who have found their dream homes with VIP.</p>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonials-track" id="testimonials-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card glass">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"VIP Real Estate made our luxury home buying experience absolutely seamless. Their attention to detail and market knowledge is unparalleled. We found our dream villa in just two weeks!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MC</div>
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span>CEO, TechVentures Inc.</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card glass">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The team at VIP went above and beyond to find us the perfect penthouse in Manhattan. Their discretion and professionalism are truly world-class. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SR</div>
+                            <div>
+                                <h4>Sophia Rodriguez</h4>
+                                <span>Fashion Designer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card glass">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Investing through VIP Real Estate has been incredibly rewarding. Their advisory team provided exceptional insights that led to a 40% return on our portfolio in just 2 years."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AK</div>
+                            <div>
+                                <h4>Alexander König</h4>
+                                <span>Investment Banker</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn" id="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots" id="testimonial-dots"></div>
+                    <button class="testimonial-btn" id="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content glass" data-aos="fade-up">
+                <div class="cta-text">
+                    <h2>Ready to Find Your <span class="gold">Dream Home</span>?</h2>
+                    <p>Let our luxury real estate experts guide you to the perfect property. Schedule a private consultation today.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="#contact" class="btn btn-gold btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Book Consultation</span>
+                    </a>
+                    <a href="tel:+18001234567" class="btn btn-outline btn-lg">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (800) 123-4567</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-crown"></i> Get In Touch</span>
+                <h2 class="section-title">Contact <span class="gold">Us</span></h2>
+                <p class="section-subtitle">Ready to take the next step? Our team of luxury real estate experts is here to help.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-info-card glass">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>500 Park Avenue, Suite 2500<br>New York, NY 10022</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card glass">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (800) 123-4567<br>+1 (212) 555-0190</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card glass">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@viprealestate.com<br>luxury@viprealestate.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card glass">
+                        <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 7:00 PM<br>Sat: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-aos="fade-left">
+                    <form class="contact-form glass" id="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a subject</option>
+                                    <option value="buy">Buying a Property</option>
+                                    <option value="sell">Selling a Property</option>
+                                    <option value="invest">Investment Inquiry</option>
+                                    <option value="consult">General Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your dream property..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-lg btn-block" id="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-crown"></i></span>
+                        <span class="logo-text">VIP</span>
+                        <span class="logo-sub">REAL ESTATE</span>
+                    </div>
+                    <p>Your premier destination for luxury real estate. We connect discerning buyers with the world's most exceptional properties.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Property Types</h4>
+                    <ul>
+                        <li><a href="#">Luxury Villas</a></li>
+                        <li><a href="#">Penthouses</a></li>
+                        <li><a href="#">Beachfront Homes</a></li>
+                        <li><a href="#">City Apartments</a></li>
+                        <li><a href="#">Country Estates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with the latest luxury listings and market insights.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-gold"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VIP Real Estate. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Property Modal -->
+    <div class="modal-overlay" id="property-modal">
+        <div class="modal-content glass">
+            <button class="modal-close" id="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
     </div>
 
-    <!-- decorative blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-  </section>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-  <!-- ═══════════════ CULT FAVORITES ═══════════════ -->
-  <section class="products" id="products">
-    <div class="section-container">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Cult Favorites</h2>
-          <p class="section-sub">Community approved essentials for every routine.</p>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
-          <button class="carousel-btn" id="nextBtn" aria-label="Next">&#8594;</button>
-        </div>
-      </div>
-
-      <div class="products-track-wrapper">
-        <div class="products-track" id="productsTrack">
-
-          <div class="product-card">
-            <div class="product-img-box" style="background:#f5e6cc;">
-              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&h=280&fit=crop" alt="Dew Drops Serum" />
-            </div>
-            <div class="product-info">
-              <div class="product-top">
-                <h3 class="product-name">Dew Drops Serum</h3>
-                <span class="product-price">$34</span>
-              </div>
-              <p class="product-tag">Hydration + Glow</p>
-              <div class="product-stars">
-                <span class="stars">★★★★</span><span class="star-half">½</span>
-                <span class="review-count">(1.3k)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-box" style="background:#d6eae8;">
-              <img src="https://images.unsplash.com/photo-1556229174-5e42a09b45c3?w=300&h=280&fit=crop" alt="Cloud Cream" />
-            </div>
-            <div class="product-info">
-              <div class="product-top">
-                <h3 class="product-name">Cloud Cream</h3>
-                <span class="product-price">$28</span>
-              </div>
-              <p class="product-tag">Moisturize + Barrier Repair</p>
-              <div class="product-stars">
-                <span class="stars">★★★★★</span>
-                <span class="review-count">(897)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-box" style="background:#f7dce6;">
-              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300&h=280&fit=crop" alt="Mist Refresh" />
-            </div>
-            <div class="product-info">
-              <div class="product-top">
-                <h3 class="product-name">Mist Refresh</h3>
-                <span class="product-price">$22</span>
-              </div>
-              <p class="product-tag">Revitalize + Tone</p>
-              <div class="product-stars">
-                <span class="stars">★★★★</span><span class="star-half">½</span>
-                <span class="review-count">(415)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-box" style="background:#f7e1c0;">
-              <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=300&h=280&fit=crop" alt="Brighten Up" />
-            </div>
-            <div class="product-info">
-              <div class="product-top">
-                <h3 class="product-name">Brighten Up</h3>
-                <span class="product-price">$42</span>
-              </div>
-              <p class="product-tag">Vitamin C + Energy</p>
-              <div class="product-stars">
-                <span class="stars">★★★★</span>
-                <span class="review-count">(602)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-box" style="background:#e8d5f0;">
-              <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=300&h=280&fit=crop" alt="Calm & Soothe" />
-            </div>
-            <div class="product-info">
-              <div class="product-top">
-                <h3 class="product-name">Calm &amp; Soothe</h3>
-                <span class="product-price">$31</span>
-              </div>
-              <p class="product-tag">Sensitivity + Redness</p>
-              <div class="product-stars">
-                <span class="stars">★★★★★</span>
-                <span class="review-count">(289)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-box" style="background:#d4edc3;">
-              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&h=280&fit=crop" alt="Green Detox Mask" />
-            </div>
-            <div class="product-info">
-              <div class="product-top">
-                <h3 class="product-name">Green Detox Mask</h3>
-                <span class="product-price">$38</span>
-              </div>
-              <p class="product-tag">Deep Cleanse + Pores</p>
-              <div class="product-stars">
-                <span class="stars">★★★★</span><span class="star-half">½</span>
-                <span class="review-count">(731)</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ ROUTINE OF THE WEEK ═══════════════ -->
-  <section class="routine" id="how">
-    <div class="routine-inner">
-      <div class="routine-content">
-        <span class="routine-badge">Editor's Choice</span>
-        <h2 class="routine-title">Routine of<br />the Week</h2>
-        <p class="routine-desc">
-          This week we're focusing on "The Glass Skin Reset"—a simple 3-step ritual to restore radiance after a long week.
-        </p>
-
-        <ol class="routine-steps">
-          <li class="routine-step">
-            <span class="step-num">01</span>
-            <div>
-              <strong>Double Cleanse</strong>
-              <p>Start with our Oil Balm followed by the Milky Wash.</p>
-            </div>
-          </li>
-          <li class="routine-step">
-            <span class="step-num">02</span>
-            <div>
-              <strong>Hyaluronic Layering</strong>
-              <p>Apply on damp skin for maximum moisture retention.</p>
-            </div>
-          </li>
-          <li class="routine-step">
-            <span class="step-num">03</span>
-            <div>
-              <strong>Seal with Silk</strong>
-              <p>Finish with our Cloud Cream to lock it all in.</p>
-            </div>
-          </li>
-        </ol>
-
-        <a href="#products" class="btn-outline-white">Shop the Routine</a>
-      </div>
-
-      <div class="routine-img-side">
-        <img
-          src="https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?w=600&h=520&fit=crop"
-          alt="Skincare products on a shelf"
-          class="routine-img"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ QUIZ CTA ═══════════════ -->
-  <section class="cta" id="quiz">
-    <div class="cta-blob"></div>
-    <div class="cta-container">
-      <h2 class="cta-title">Ready for your glow up?</h2>
-      <p class="cta-sub">
-        Take our 3-minute Skin Quiz and let our dermatologists and AI<br />
-        build the perfect routine for your lifestyle.
-      </p>
-
-      <a href="#" class="btn-dark btn-lg" id="startQuizBtn">
-        Start the Quiz &nbsp;→
-      </a>
-
-      <div class="cta-stats">
-        <div class="stat">
-          <span class="stat-value">50k+</span>
-          <span class="stat-label">ROUTINES CREATED</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">98%</span>
-          <span class="stat-label">SUCCESS RATE</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ FOOTER ═══════════════ -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <a href="#" class="nav-logo footer-logo">
-          <span class="logo-icon">✦</span>
-          glowguide
-        </a>
-        <p class="footer-tagline">
-          Redefining skincare routines for the modern age. Clean, science-driven, and clinically proven.
-        </p>
-        <div class="footer-socials">
-          <a href="#" aria-label="Instagram" class="social-icon">&#9679;</a>
-          <a href="#" aria-label="TikTok" class="social-icon">&#9650;</a>
-          <a href="#" aria-label="Twitter" class="social-icon">&#9632;</a>
-        </div>
-      </div>
-
-      <div class="footer-links">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#">Skin Quiz</a></li>
-          <li><a href="#">Best Sellers</a></li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Ingredient Glossary</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Shipping &amp; Returns</a></li>
-          <li><a href="#">Skin Consultations</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-newsletter">
-        <h4>Join the Glow</h4>
-        <p>Tips, inspo, and early access to your inbox.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input
-            type="email"
-            placeholder="Email address"
-            class="newsletter-input"
-            id="newsletterEmail"
-            required
-          />
-          <button type="submit" class="newsletter-btn" aria-label="Subscribe">→</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 GlowGuide Inc. All rights reserved.</span>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ═══════════════ QUIZ MODAL ═══════════════ -->
-  <div class="modal-overlay" id="quizModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div class="modal-step" id="step1">
-        <h3 class="modal-title">What's your skin type?</h3>
-        <div class="quiz-options">
-          <button class="quiz-option" data-next="step2">🛢️ Oily</button>
-          <button class="quiz-option" data-next="step2">🏜️ Dry</button>
-          <button class="quiz-option" data-next="step2">⚖️ Combination</button>
-          <button class="quiz-option" data-next="step2">🌿 Normal</button>
-          <button class="quiz-option" data-next="step2">🌸 Sensitive</button>
-        </div>
-      </div>
-      <div class="modal-step hidden" id="step2">
-        <h3 class="modal-title">What's your main concern?</h3>
-        <div class="quiz-options">
-          <button class="quiz-option" data-next="step3">🔴 Acne & Breakouts</button>
-          <button class="quiz-option" data-next="step3">⏳ Anti-Aging</button>
-          <button class="quiz-option" data-next="step3">✨ Brightening</button>
-          <button class="quiz-option" data-next="step3">💧 Hydration</button>
-          <button class="quiz-option" data-next="step3">🛡️ Sensitivity</button>
-        </div>
-      </div>
-      <div class="modal-step hidden" id="step3">
-        <h3 class="modal-title">Your personalized routine is ready!</h3>
-        <div class="quiz-result">
-          <div class="result-icon">🌟</div>
-          <p>Based on your answers, we recommend the <strong>Glass Skin Reset</strong> routine — crafted just for you.</p>
-          <a href="#products" class="btn-primary btn-lg" id="viewRoutineBtn">View My Routine</a>
-        </div>
-      </div>
-      <div class="quiz-progress">
-        <div class="progress-dot active" id="dot1"></div>
-        <div class="progress-dot" id="dot2"></div>
-        <div class="progress-dot" id="dot3"></div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
